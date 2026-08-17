@@ -1,1 +1,0 @@
-import{j as t}from"./index-DbuqIIsK.js";function m({title:e,description:s,details:r,action:n}){return t.jsxs("section",{className:"empty-state",children:[t.jsx("h2",{children:e}),s&&t.jsx("p",{children:s}),r,n]})}export{m as E};
