@@ -1,0 +1,1 @@
+import{j as t}from"./index-DBHwIrh3.js";function a({title:e,description:s,action:r}){return t.jsxs("section",{className:"empty-state",children:[t.jsx("h2",{children:e}),s&&t.jsx("p",{children:s}),r]})}export{a as E};
