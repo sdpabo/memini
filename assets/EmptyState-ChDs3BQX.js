@@ -1,1 +1,0 @@
-import{o as c,j as t}from"./index-Pr2yC8oC.js";const r=[["path",{d:"m9 18 6-6-6-6",key:"mthhwq"}]],a=c("chevron-right",r);function i({title:s,description:e,details:n,action:o}){return t.jsxs("section",{className:"empty-state",children:[t.jsx("h2",{children:s}),e&&t.jsx("p",{children:e}),n,o]})}export{a as C,i as E};
