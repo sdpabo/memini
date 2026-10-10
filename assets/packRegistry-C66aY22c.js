@@ -1,0 +1,1 @@
+import{n}from"./queryNormalization-BFuSstlD.js";const r=[{id:"oewn-en",language:"en",displayName:"English",sourceName:"Open English WordNet",sourceUrl:"https://en-word.net/",license:"CC BY 4.0",attribution:"Open English WordNet Community, based on Princeton WordNet. Licensed under CC BY 4.0.",normalizeQuery:e=>n("en",e)}];export{r as dictionaryPacks};

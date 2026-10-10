@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "packs": [
+    {
+      "id": "cedict-zh-en-expanded",
+      "version": "2026-10-10.2",
+      "format": "bilingual",
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "directions": [
+        {
+          "sourceLanguage": "zh",
+          "targetLanguage": "en"
+        },
+        {
+          "sourceLanguage": "en",
+          "targetLanguage": "zh"
+        }
+      ],
+      "sourceLanguage": "zh",
+      "targetLanguage": "en",
+      "coreUrl": "cedict-zh-en-expanded-2026-10-10.2-core-v1.json.gz",
+      "compressedSize": 12302401,
+      "uncompressedSize": 94694538,
+      "checksum": "4a1e039ddb358228186a4ff248917dde8efce428a48525421d3aa5b0f64b1750",
+      "entryCount": 72786,
+      "sources": [
+        {
+          "source": "CC-CEDICT",
+          "license": "CC BY-SA 4.0",
+          "sourceUrl": "https://cc-cedict.org/wiki/",
+          "sourceVersion": "2026-10-10.2 · Memini expanded 30,000"
+        },
+        {
+          "source": "Tatoeba",
+          "license": "CC BY 2.0 FR",
+          "sourceUrl": "https://tatoeba.org/",
+          "sourceVersion": "2026-10-03"
+        }
+      ],
+      "examplesUrl": "cedict-zh-en-expanded-2026-10-10.2-examples-v1.json.gz",
+      "examplesCompressedSize": 6223416,
+      "examplesUncompressedSize": 46803060,
+      "examplesChecksum": "65d903baed6503c5d14737ded834aa22b34a8110581c5f4b706e9a11c0fbf8dd",
+      "exampleCount": 24313
+    },
+    {
+      "id": "cedict-zh-en-starter",
+      "version": "2026-10-10.2",
+      "format": "bilingual",
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "directions": [
+        {
+          "sourceLanguage": "zh",
+          "targetLanguage": "en"
+        },
+        {
+          "sourceLanguage": "en",
+          "targetLanguage": "zh"
+        }
+      ],
+      "sourceLanguage": "zh",
+      "targetLanguage": "en",
+      "coreUrl": "cedict-zh-en-starter-2026-10-10.2-core-v1.json.gz",
+      "compressedSize": 3400427,
+      "uncompressedSize": 26706648,
+      "checksum": "a1906fdd9ef5a3c8898569e54bda834977b9fc26dbb0b7af4c634a7c84e49c33",
+      "entryCount": 21559,
+      "sources": [
+        {
+          "source": "CC-CEDICT",
+          "license": "CC BY-SA 4.0",
+          "sourceUrl": "https://cc-cedict.org/wiki/",
+          "sourceVersion": "2026-10-10.2 · Memini starter 8,000"
+        },
+        {
+          "source": "Tatoeba",
+          "license": "CC BY 2.0 FR",
+          "sourceUrl": "https://tatoeba.org/",
+          "sourceVersion": "2026-10-03"
+        }
+      ],
+      "examplesUrl": "cedict-zh-en-starter-2026-10-10.2-examples-v1.json.gz",
+      "examplesCompressedSize": 4067353,
+      "examplesUncompressedSize": 30483639,
+      "examplesChecksum": "bbd6acb4792183aff4acdd3197c54bba067112bbfe4db8be5cd5f132216934de",
+      "exampleCount": 15720
+    },
+    {
+      "id": "en-uk-dmklinger",
+      "version": "2026-10-10.3",
+      "format": "bilingual",
+      "languages": [
+        "en",
+        "uk"
+      ],
+      "directions": [
+        {
+          "sourceLanguage": "en",
+          "targetLanguage": "uk"
+        },
+        {
+          "sourceLanguage": "uk",
+          "targetLanguage": "en"
+        }
+      ],
+      "sourceLanguage": "en",
+      "targetLanguage": "uk",
+      "coreUrl": "en-uk-dmklinger-2026-10-10.3-core-v1.json.gz",
+      "compressedSize": 13170881,
+      "uncompressedSize": 127728535,
+      "checksum": "1ecef0c3c512ae24af1390cde20daca5c1acdda579c16122fa21d813fdc55e17",
+      "entryCount": 67118,
+      "sources": [
+        {
+          "source": "Ukrainian Dictionary (Wiktionary / DBnary; forms from Ukrainian Linguistic Corpus)",
+          "license": "CC BY-SA 3.0",
+          "sourceVersion": "2026-10-10.1",
+          "sourceUrl": "https://github.com/arudnitsky/dmklinger-ukrainian"
+        },
+        {
+          "source": "Tatoeba",
+          "license": "CC BY 2.0 FR",
+          "sourceUrl": "https://tatoeba.org/"
+        }
+      ],
+      "examplesUrl": "en-uk-dmklinger-2026-10-10.3-examples-v1.json.gz",
+      "examplesCompressedSize": 3292801,
+      "examplesUncompressedSize": 30198035,
+      "examplesChecksum": "be230301dcf378dbd9cb1930589f9ffc9162057d3941859295e65b27a39d0de6",
+      "exampleCount": 15000
+    },
+    {
+      "id": "jmdict-ja-en",
+      "version": "2026-10-10",
+      "format": "bilingual",
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "directions": [
+        {
+          "sourceLanguage": "ja",
+          "targetLanguage": "en"
+        },
+        {
+          "sourceLanguage": "en",
+          "targetLanguage": "ja"
+        }
+      ],
+      "sourceLanguage": "ja",
+      "targetLanguage": "en",
+      "coreUrl": "jmdict-ja-en-2026-10-10-core-v1.json.gz",
+      "compressedSize": 8457777,
+      "uncompressedSize": 79242529,
+      "checksum": "8d8dab9ca9e3f89f84407a381aa134e5ad8dcc1a035f8e6698896b5fff2adc43",
+      "entryCount": 70126,
+      "sources": [
+        {
+          "source": "JMdict / EDRDG",
+          "license": "CC BY-SA 4.0",
+          "sourceVersion": "JMdict_e_examp",
+          "sourceUrl": "https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project"
+        },
+        {
+          "source": "Tatoeba (sentence IDs credited in JMdict_e_examp)",
+          "license": "CC BY 2.0 FR",
+          "sourceUrl": "https://tatoeba.org/"
+        }
+      ],
+      "examplesUrl": "jmdict-ja-en-2026-10-10-examples-v1.json.gz",
+      "examplesCompressedSize": 4017961,
+      "examplesUncompressedSize": 36557956,
+      "examplesChecksum": "214e4290dec5802205cc033aada0edd47c61a15c04baed147db1307ed177ba68",
+      "exampleCount": 14653
+    },
+    {
+      "id": "oewn-en",
+      "version": "2025",
+      "format": "dictionary",
+      "sourceLanguage": "en",
+      "coreUrl": "oewn-en-2025-core-v1.json.gz",
+      "compressedSize": 11569548,
+      "uncompressedSize": 63279547,
+      "checksum": "cfbb9cadbffc08fd5fcf16301c60bae975cc2c3d2bad220c6b4add69278d5d97",
+      "entryCount": 128009,
+      "sources": [
+        {
+          "source": "Open English WordNet",
+          "license": "CC BY 4.0",
+          "sourceUrl": "https://en-word.net/",
+          "sourceVersion": "2025"
+        }
+      ]
+    }
+  ]
+}
