@@ -1,5 +1,6 @@
 {
   "schemaVersion": 1,
+  "releaseBaseUrl": "https://github.com/sdpabo/memini/releases/download/dictionary-packs-v1/",
   "packs": [
     {
       "id": "cedict-zh-en-expanded",
