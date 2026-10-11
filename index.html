@@ -6,10 +6,10 @@
       name="viewport"
       content="width=device-width,initial-scale=1,viewport-fit=cover"
     />
-    <title>Memini — Free Flashcards &amp; Dictionaries for Language Learning</title>
+    <title>memini — Free Flashcards &amp; Dictionaries for Language Learning</title>
     <meta
       name="description"
-      content="Learn languages with multilingual flashcards, dictionaries and spaced repetition. Memini works offline and keeps your decks and learning progress on your device."
+      content="Learn languages with multilingual flashcards, dictionaries and spaced repetition. memini works offline and keeps your decks and learning progress on your device."
     />
     <meta name="author" content="sdpabo" />
     <meta
@@ -17,10 +17,21 @@
       content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
     />
     <meta name="theme-color" content="#f8f9fb" />
-    <meta name="application-name" content="Memini" />
-    <meta name="apple-mobile-web-app-title" content="Memini" />
+    <meta name="application-name" content="memini" />
+    <meta name="apple-mobile-web-app-title" content="memini" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <script>
+      // Apply the saved palette before the stylesheet paints, preventing a
+      // light/pink flash while React and the settings database initialise.
+      (() => {
+        const theme = localStorage.getItem("flashcards-theme");
+        if (["light", "dark", "beige", "sakura"].includes(theme)) {
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme === "dark" ? "dark" : "light";
+        }
+      })();
+    </script>
 
     <link rel="canonical" href="https://sdpabo.github.io/memini/" />
     <link
@@ -46,14 +57,14 @@
     />
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Memini" />
+    <meta property="og:site_name" content="memini" />
     <meta
       property="og:title"
-      content="Memini — Free Flashcards &amp; Dictionaries for Language Learning"
+      content="memini — Free Flashcards &amp; Dictionaries for Language Learning"
     />
     <meta
       property="og:description"
-      content="Learn languages with multilingual flashcards, dictionaries and spaced repetition. Memini works offline and keeps your decks and progress on your device."
+      content="Learn languages with multilingual flashcards, dictionaries and spaced repetition. memini works offline and keeps your decks and progress on your device."
     />
     <meta property="og:url" content="https://sdpabo.github.io/memini/" />
     <meta
@@ -64,18 +75,18 @@
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="Memini offline multilingual flashcards"
+      content="memini offline multilingual flashcards"
     />
     <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Memini — Free Flashcards &amp; Dictionaries for Language Learning"
+      content="memini — Free Flashcards &amp; Dictionaries for Language Learning"
     />
     <meta
       name="twitter:description"
-      content="Learn languages with multilingual flashcards, dictionaries and spaced repetition. Memini works offline and keeps your progress on your device."
+      content="Learn languages with multilingual flashcards, dictionaries and spaced repetition. memini works offline and keeps your progress on your device."
     />
     <meta
       name="twitter:image"
@@ -83,14 +94,14 @@
     />
     <meta
       name="twitter:image:alt"
-      content="Memini offline multilingual flashcards"
+      content="memini offline multilingual flashcards"
     />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "Memini",
+        "name": "memini",
         "url": "https://sdpabo.github.io/memini/",
         "description": "A free offline multilingual flashcard app with device-local decks and learning progress.",
         "applicationCategory": "EducationalApplication",
@@ -107,16 +118,16 @@
         }
       }
     </script>
-    <script type="module" crossorigin src="/memini/assets/index-DNa2Yfoi.js"></script>
+    <script type="module" crossorigin src="/memini/assets/index-DhNdFAQp.js"></script>
     <link rel="modulepreload" crossorigin href="/memini/assets/react-vendor-Dw2UxApT.js">
-    <link rel="stylesheet" crossorigin href="/memini/assets/index-WTPYejFD.css">
+    <link rel="stylesheet" crossorigin href="/memini/assets/index-BM5cujDf.css">
   <link rel="manifest" href="/memini/manifest.webmanifest"></head>
 
   <body>
     <div id="root"></div>
     <noscript>
       <main>
-        <h1>Memini — offline multilingual flashcards</h1>
+        <h1>memini — offline multilingual flashcards</h1>
         <p>
           Create vocabulary decks, add translations and images, and study
           offline. Your learning data remains stored locally on your device.
