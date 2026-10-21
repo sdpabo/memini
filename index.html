@@ -21,38 +21,43 @@
     <meta name="apple-mobile-web-app-title" content="memini" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link
+      rel="icon"
+      href="/memini/icons/themes/favicon-light.svg"
+      type="image/svg+xml"
+      data-theme-icon="favicon"
+    />
     <script>
       // Apply the saved palette before the stylesheet paints, preventing a
       // light/pink flash while React and the settings database initialise.
       (() => {
-        const theme = localStorage.getItem("flashcards-theme");
-        if (["light", "dark", "beige", "sakura"].includes(theme)) {
-          document.documentElement.dataset.theme = theme;
-          document.documentElement.style.colorScheme = theme === "dark" ? "dark" : "light";
-        }
+        const themes = {
+          light: { background: "#f8f9fb", icon: "favicon-light.svg" },
+          dark: { background: "#0f141b", icon: "favicon-dark.svg" },
+          beige: { background: "#f8f4ea", icon: "favicon-beige.svg" },
+          sakura: { background: "#fff8fa", icon: "favicon-sakura.svg" },
+        };
+        const savedTheme = localStorage.getItem("flashcards-theme");
+        const theme = themes[savedTheme] ? savedTheme : "light";
+        const baseUrl = "/memini/";
+
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme === "dark" ? "dark" : "light";
+        document.querySelector('meta[name="theme-color"]').content = themes[theme].background;
+        document.querySelector('[data-theme-icon="favicon"]').href = `${baseUrl}icons/themes/${themes[theme].icon}`;
       })();
     </script>
 
     <link rel="canonical" href="https://sdpabo.github.io/memini/" />
     <link
       rel="icon"
-      href="https://sdpabo.github.io/memini/favicon.ico"
-      sizes="any"
-    />
-    <link
-      rel="icon"
-      href="https://sdpabo.github.io/memini/icons/icon-192.svg"
-      type="image/svg+xml"
-    />
-    <link
-      rel="icon"
-      href="https://sdpabo.github.io/memini/favicon-32x32.png"
+      href="/memini/favicon-32x32.png"
       type="image/png"
       sizes="32x32"
     />
     <link
       rel="apple-touch-icon"
-      href="https://sdpabo.github.io/memini/apple-touch-icon.png"
+      href="/memini/apple-touch-icon.png"
       sizes="180x180"
     />
 
@@ -118,9 +123,9 @@
         }
       }
     </script>
-    <script type="module" crossorigin src="/memini/assets/index-NXov8yu8.js"></script>
+    <script type="module" crossorigin src="/memini/assets/index-rDPSchov.js"></script>
     <link rel="modulepreload" crossorigin href="/memini/assets/react-vendor-DqXyXfmA.js">
-    <link rel="stylesheet" crossorigin href="/memini/assets/index-BcyyjD2W.css">
+    <link rel="stylesheet" crossorigin href="/memini/assets/index-DNJfKO7O.css">
   <link rel="manifest" href="/memini/manifest.webmanifest"></head>
 
   <body>
