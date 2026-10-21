@@ -1,1 +1,0 @@
-import{a as t}from"./models-_C3CR2hb.js";const o=t[0];function u(r){return`/memini/illustrations/${r}`}function c(r,n){if(r&&t.includes(r))return r;if(!n)return o;let e=0;for(const i of n)e=e*31+i.charCodeAt(0)>>>0;return t[e%t.length]??o}export{u as d,c as r};
