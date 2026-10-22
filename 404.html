@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#f8f9fb" />
+    <title>Page not found · memini</title>
+    <script>
+      (() => {
+        const basePath = "/memini";
+        const relativePath = location.pathname.startsWith(basePath)
+          ? location.pathname.slice(basePath.length)
+          : location.pathname;
+        const path = relativePath.replace(/\/+$/, "") || "/";
+        const appRoutes = [
+          "/landing",
+          "/install",
+          "/start",
+          "/language",
+          "/onboarding",
+          "/decks",
+          "/study",
+          "/settings",
+          "/dictionary",
+        ];
+        const isAppRoute = appRoutes.some(
+          (route) => path === route || path.startsWith(`${route}/`),
+        );
+
+        if (isAppRoute) {
+          const destination = `${path}${location.search}${location.hash}`;
+          location.replace(
+            `${basePath}/?app=1&redirect=${encodeURIComponent(destination)}`,
+          );
+        }
+      })();
+    </script>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        background: #f8f9fb;
+        color: #20242c;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        display: grid;
+        min-height: 100svh;
+        margin: 0;
+        padding: 24px;
+        place-items: center;
+        background:
+          radial-gradient(circle at 16% 14%, #e9e5ff 0 8%, transparent 28%),
+          radial-gradient(circle at 88% 82%, #e6f0df 0 7%, transparent 25%),
+          #f8f9fb;
+      }
+      main {
+        width: min(100%, 520px);
+        padding: clamp(30px, 8vw, 56px);
+        border: 1px solid #dfe3ea;
+        border-radius: 28px;
+        background: #ffffff;
+        box-shadow: 10px 12px 0 #eceafd;
+        text-align: center;
+      }
+      .brand {
+        color: #6862b7;
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+      }
+      .code {
+        margin: 28px 0 8px;
+        color: #6862b7;
+        font-size: clamp(64px, 20vw, 112px);
+        font-weight: 850;
+        letter-spacing: -0.09em;
+        line-height: 0.85;
+      }
+      h1 {
+        margin: 22px 0 12px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(32px, 9vw, 46px);
+        letter-spacing: -0.05em;
+        line-height: 1.05;
+      }
+      p {
+        margin: 0 auto;
+        color: #687182;
+        line-height: 1.65;
+      }
+      a {
+        display: inline-flex;
+        min-height: 46px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 28px;
+        padding: 11px 20px;
+        border-radius: 13px;
+        background: #6862b7;
+        box-shadow: 0 4px 0 #4f4a95;
+        color: #ffffff;
+        font-weight: 750;
+        text-decoration: none;
+      }
+      a:focus-visible {
+        outline: 3px solid #20242c;
+        outline-offset: 4px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          background: #0f141b;
+          color: #edf0f6;
+        }
+        body {
+          background:
+            radial-gradient(circle at 16% 14%, #29264d 0 8%, transparent 28%),
+            radial-gradient(circle at 88% 82%, #1d382f 0 7%, transparent 25%),
+            #0f141b;
+        }
+        main {
+          border-color: #303846;
+          background: #171e28;
+          box-shadow: 10px 12px 0 #24213f;
+        }
+        .brand,
+        .code {
+          color: #aaa3ff;
+        }
+        p {
+          color: #aeb7c6;
+        }
+        a {
+          background: #8e86e8;
+          box-shadow: 0 4px 0 #635cae;
+          color: #11151d;
+        }
+        a:focus-visible {
+          outline-color: #edf0f6;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="brand">♧ memini</div>
+      <div class="code">404</div>
+      <h1 id="title">Page not found</h1>
+      <p id="description">
+        This page does not exist, but your next word is still waiting.
+      </p>
+      <a id="home-link" href="/memini/landing">Go to landing page&nbsp; →</a>
+    </main>
+    <script>
+      const copy = {
+        uk: {
+          title: "Сторінку не знайдено",
+          description:
+            "Такої сторінки немає, але ваше наступне слово все ще чекає.",
+          action: "На головну",
+        },
+        ja: {
+          title: "ページが見つかりません",
+          description: "このページはありませんが、次の単語が待っています。",
+          action: "ランディングページへ",
+        },
+        zh: {
+          title: "找不到页面",
+          description: "这个页面不存在，但你的下一个单词仍在等你。",
+          action: "返回首页",
+        },
+      };
+      const language = navigator.language.toLowerCase().split("-")[0];
+      const localized = copy[language];
+      if (localized) {
+        document.documentElement.lang = language;
+        document.getElementById("title").textContent = localized.title;
+        document.getElementById("description").textContent =
+          localized.description;
+        document.getElementById("home-link").textContent =
+          `${localized.action} →`;
+      }
+    </script>
+  </body>
+</html>
