@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>memini — Free Flashcards &amp; Dictionaries for Language Learning</title>
+    <meta
+      name="description"
+      content="Learn languages with multilingual flashcards, dictionaries and spaced repetition. memini works offline and keeps your decks and learning progress on your device."
+    />
+    <meta name="author" content="sdpabo" />
+    <meta
+      name="google-site-verification"
+      content="AkSZ-hwf9vU11xF6zryCaj7g3R_lOlejhER_XNsV28g"
+    />
+    <meta
+      name="robots"
+      content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+    />
+    <meta name="theme-color" content="#f8f9fb" />
+    <meta name="application-name" content="memini" />
+    <meta name="apple-mobile-web-app-title" content="memini" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link
+      rel="icon"
+      href="/memini/icons/themes/favicon-light.svg"
+      type="image/svg+xml"
+      data-theme-icon="favicon"
+    />
+    <script>
+      // Apply the saved palette before the stylesheet paints, preventing a
+      // light/pink flash while React and the settings database initialise.
+      (() => {
+        const themes = {
+          light: { background: "#f8f9fb", icon: "favicon-light.svg" },
+          dark: { background: "#0f141b", icon: "favicon-dark.svg" },
+          beige: { background: "#f8f4ea", icon: "favicon-beige.svg" },
+          sakura: { background: "#fff8fa", icon: "favicon-sakura.svg" },
+        };
+        const savedTheme = localStorage.getItem("flashcards-theme");
+        const systemTheme = window.matchMedia?.("(prefers-color-scheme: dark)")
+          .matches
+          ? "dark"
+          : "light";
+        const theme = themes[savedTheme] ? savedTheme : systemTheme;
+        const baseUrl = "/memini/";
+
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme =
+          theme === "dark" ? "dark" : "light";
+        document.querySelector('meta[name="theme-color"]').content =
+          themes[theme].background;
+        document.querySelector('[data-theme-icon="favicon"]').href =
+          `${baseUrl}icons/themes/${themes[theme].icon}`;
+      })();
+    </script>
+
+    <link rel="canonical" href="https://sdpabo.github.io/memini/landing/" />
+    <link
+      rel="apple-touch-icon"
+      href="/memini/apple-touch-icon.png"
+      sizes="180x180"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="memini" />
+    <meta
+      property="og:title"
+      content="memini — Free Flashcards &amp; Dictionaries for Language Learning"
+    />
+    <meta
+      property="og:description"
+      content="Learn languages with multilingual flashcards, dictionaries and spaced repetition. memini works offline and keeps your decks and learning progress on your device."
+    />
+    <meta
+      property="og:url"
+      content="https://sdpabo.github.io/memini/landing/"
+    />
+    <meta
+      property="og:image"
+      content="https://sdpabo.github.io/memini/og.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="memini offline multilingual flashcards"
+    />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="memini — Free Flashcards &amp; Dictionaries for Language Learning"
+    />
+    <meta
+      name="twitter:description"
+      content="Learn languages with multilingual flashcards, dictionaries and spaced repetition. memini works offline and keeps your decks and learning progress on your device."
+    />
+    <meta
+      name="twitter:image"
+      content="https://sdpabo.github.io/memini/og.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="memini offline multilingual flashcards"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "memini",
+        "url": "https://sdpabo.github.io/memini/",
+        "description": "A free offline multilingual flashcard app with device-local decks and learning progress.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Any",
+        "inLanguage": ["en", "uk", "ja", "zh"],
+        "author": {
+          "@type": "Person",
+          "name": "sdpabo"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+    <script type="module" crossorigin src="/memini/assets/index-CRrX547H.js"></script>
+    <link rel="modulepreload" crossorigin href="/memini/assets/react-vendor-DqXyXfmA.js">
+    <link rel="stylesheet" crossorigin href="/memini/assets/index-CVTGZdfr.css">
+  <link rel="manifest" href="/memini/manifest.webmanifest"></head>
+
+  <body>
+    <div id="root">
+    <div class="public-page landing-page landing-page--prerendered" id="top">
+      <main class="landing-main">
+        <section class="landing-hero">
+          <div class="landing-wrap landing-hero__grid">
+            <div class="landing-hero__copy">
+              <span class="landing-hero__kicker">✿ your tiny language-learning companion</span>
+              <h1>Learn words<br /><em>your way.</em></h1>
+              <p>Build your own decks, turn dictionary words into cards, and practise with flashcards or flexible tests—at your own pace.</p>
+              <div class="landing-hero__buttons">
+                <a class="button landing-button" href="/memini/start">Start learning →</a>
+                <a class="button landing-button landing-button--light" href="#features">See how it works ↓</a>
+              </div>
+              <p class="landing-hero__notes">Free to use · Works offline</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="landing-section landing-features" id="features">
+          <div class="landing-wrap">
+            <header class="landing-section-head">
+              <p class="landing-eyebrow">made for curious minds</p>
+              <h2>Everything you need to make <em>new words stick.</em></h2>
+              <p>Choose a quick review or a more challenging way to recall what you know.</p>
+            </header>
+            <div class="landing-feature-grid">
+              <article class="landing-feature-card"><h3>Study your way</h3><p>Reveal answers, listen to audio and move through your own cards at your pace.</p></article>
+              <article class="landing-feature-card"><h3>Find it. Save it.</h3><p>Look up vocabulary and turn useful entries into editable cards.</p></article>
+              <article class="landing-feature-card"><h3>Make tests yours</h3><p>Practise typing, listening, pictures and matching with compatible card content.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="landing-section landing-demo" id="try">
+          <div class="landing-wrap landing-demo__layout">
+            <div class="landing-demo__copy">
+              <p class="landing-eyebrow">a little practice, your way</p>
+              <h2>One deck. <em>So many ways</em> to learn.</h2>
+              <p>Choose a quick review or a more challenging way to recall what you know.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="landing-section landing-dictionary" id="dictionary">
+          <div class="landing-wrap landing-split">
+            <div class="landing-dictionary__copy">
+              <p class="landing-eyebrow">a word worth keeping</p>
+              <h2>From “what&#039;s that?” to <em>“I know this!”</em></h2>
+              <p>Install a dictionary, check meanings and readings, then open an editable card with useful details already filled in. Example sentences are a separate optional download.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="landing-section landing-install" id="install">
+          <div class="landing-wrap">
+            <header class="landing-section-head">
+              <p class="landing-eyebrow">your little study buddy, anywhere</p>
+              <h2>Take memini <em>with you.</em></h2>
+              <p>Use memini in your browser or add it to your Home Screen. Installation is optional.</p>
+            </header>
+          </div>
+        </section>
+
+        <section class="landing-closing">
+          <p class="landing-eyebrow">one word at a time</p>
+          <h2>Your next word<br />is waiting for you.</h2>
+          <p>Your own decks, helpful dictionaries and flexible practice in one place.</p>
+          <a class="button landing-button" href="/memini/start">Let&#039;s learn something →</a>
+        </section>
+      </main>
+    </div></div>
+    <noscript>
+      <main>
+        <h1>memini — offline multilingual flashcards</h1>
+        <p>
+          Create vocabulary decks, add translations and images, and study
+          offline. Your learning data remains stored locally on your device.
+        </p>
+      </main>
+    </noscript>
+  </body>
+</html>
