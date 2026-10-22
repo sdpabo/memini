@@ -5,10 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
     <meta name="theme-color" content="#f8f9fb" />
+    <link
+      rel="icon"
+      href="/memini/icons/themes/favicon-light.svg"
+      type="image/svg+xml"
+      data-theme-icon="favicon"
+    />
     <title>Page not found · memini</title>
     <script>
       (() => {
         const basePath = "/memini";
+        const colorScheme = window.matchMedia?.("(prefers-color-scheme: dark)");
+        const syncBrowserTheme = (dark) => {
+          const theme = dark ? "dark" : "light";
+          document.querySelector("[data-theme-icon='favicon']").href =
+            `${basePath}/icons/themes/favicon-${theme}.svg`;
+          document.querySelector("meta[name='theme-color']").content = dark
+            ? "#0f141b"
+            : "#f8f9fb";
+        };
+        syncBrowserTheme(colorScheme?.matches ?? false);
+        colorScheme?.addEventListener("change", (event) =>
+          syncBrowserTheme(event.matches),
+        );
+
         const relativePath = location.pathname.startsWith(basePath)
           ? location.pathname.slice(basePath.length)
           : location.pathname;
@@ -153,7 +173,7 @@
   </head>
   <body>
     <main>
-      <div class="brand">♧ memini</div>
+      <div class="brand">memini</div>
       <div class="code">404</div>
       <h1 id="title">Page not found</h1>
       <p id="description">

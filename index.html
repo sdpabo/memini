@@ -6,7 +6,9 @@
       name="viewport"
       content="width=device-width,initial-scale=1,viewport-fit=cover"
     />
-    <title>memini — Free Flashcards &amp; Dictionaries for Language Learning</title>
+    <title>
+      memini — Free Flashcards &amp; Dictionaries for Language Learning
+    </title>
     <meta
       name="description"
       content="Learn languages with multilingual flashcards, dictionaries and spaced repetition. memini works offline and keeps your decks and learning progress on your device."
@@ -19,7 +21,7 @@
     <meta name="theme-color" content="#f8f9fb" />
     <meta name="application-name" content="memini" />
     <meta name="apple-mobile-web-app-title" content="memini" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <link
       rel="icon"
@@ -38,23 +40,24 @@
           sakura: { background: "#fff8fa", icon: "favicon-sakura.svg" },
         };
         const savedTheme = localStorage.getItem("flashcards-theme");
-        const theme = themes[savedTheme] ? savedTheme : "light";
+        const systemTheme = window.matchMedia?.("(prefers-color-scheme: dark)")
+          .matches
+          ? "dark"
+          : "light";
+        const theme = themes[savedTheme] ? savedTheme : systemTheme;
         const baseUrl = "/memini/";
 
         document.documentElement.dataset.theme = theme;
-        document.documentElement.style.colorScheme = theme === "dark" ? "dark" : "light";
-        document.querySelector('meta[name="theme-color"]').content = themes[theme].background;
-        document.querySelector('[data-theme-icon="favicon"]').href = `${baseUrl}icons/themes/${themes[theme].icon}`;
+        document.documentElement.style.colorScheme =
+          theme === "dark" ? "dark" : "light";
+        document.querySelector('meta[name="theme-color"]').content =
+          themes[theme].background;
+        document.querySelector('[data-theme-icon="favicon"]').href =
+          `${baseUrl}icons/themes/${themes[theme].icon}`;
       })();
     </script>
 
     <link rel="canonical" href="https://sdpabo.github.io/memini/" />
-    <link
-      rel="icon"
-      href="/memini/favicon-32x32.png"
-      type="image/png"
-      sizes="32x32"
-    />
     <link
       rel="apple-touch-icon"
       href="/memini/apple-touch-icon.png"
@@ -123,9 +126,9 @@
         }
       }
     </script>
-    <script type="module" crossorigin src="/memini/assets/index-Uu3Cn1Ib.js"></script>
+    <script type="module" crossorigin src="/memini/assets/index-Czzi_FJ0.js"></script>
     <link rel="modulepreload" crossorigin href="/memini/assets/react-vendor-DqXyXfmA.js">
-    <link rel="stylesheet" crossorigin href="/memini/assets/index-DNJfKO7O.css">
+    <link rel="stylesheet" crossorigin href="/memini/assets/index-CVTGZdfr.css">
   <link rel="manifest" href="/memini/manifest.webmanifest"></head>
 
   <body>
